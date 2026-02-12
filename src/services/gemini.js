@@ -2,7 +2,7 @@ import { GoogleGenerativeAI } from "@google/generative-ai";
 
 // Initialize Gemini API
 let genAI = null;
-const API_KEY = "AIzaSyBm9TVWNST8lWXqatd3D_KITrLSEDgakA4";
+const API_KEY = "";
 
 // Model names to try (in priority order)
 const MODEL_NAMES = ["gemini-2.5-flash", "gemini-2.0-flash", "gemini-1.5-flash"];
@@ -18,9 +18,6 @@ const getGenAI = () => {
   return genAI;
 };
 
-/**
- * Convert a File to a base64 GenerativeAI Part
- */
 const fileToGenerativePart = async (file) => {
   return new Promise((resolve, reject) => {
     const reader = new FileReader();
